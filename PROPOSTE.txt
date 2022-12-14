@@ -1,0 +1,27 @@
+>OPZIONI:
+-Criptozoologia
+-Cocktail
+-Notiziario
+
+
+==========================================================================
+[CRIPTOZOOLOGIA]
+
+>COSA CONTIENE?
+-Vengono pubblicate notizie relative a report, o avvistamenti di animali
+-Per ogni animale si può esprimere una votazione riguardo alla credibilità o meno
+-Un admin può aggiungere un animale o scrivere un report
+-Si può consultare una lista con lo STATUS:
+    scoperto/smentito/sconosciuto
+e una classifica in base al numero di votazioni per quelli sconosciuti
+(se si pensa che esistano o meno)
+-Le notizie hanno il tag "NUOVO AVVISTAMENTO"/"AVVISTAMENTO ULTERIORE"/"SCOPERTA"
+
+>COSA PUO' FARE L'UTENTE?
+-Aggiungere un commento a una Notizia
+    Commento sia come "guest" che utente registrato
+-Esprimere un parere (+/-) riguardo all'esistenza o meno di un animale
+-Ricercare delle news in base al tag, dove i risultati verranno organizzati in una grid
+-Iscriversi alla "newsletter" per un certo topic dove si viene informati su eventuali update
+(es. nuovi avvistamenti, scoperte, risultati di sondaggi mensili, ecc.) inserendo il proprio
+indirizzo e-mail nel database
