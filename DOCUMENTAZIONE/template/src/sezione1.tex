@@ -1,0 +1,52 @@
+\section{Bozza}
+
+\subsection{Elementi}
+    \begin{itemize}
+        \item Una pagina per ogni animale:
+        \begin{itemize}
+            \item box votazioni[\textbf{Esiste}, \textbf{Non esiste}]
+            \item articoli
+            \begin{itemize}
+                \item id (chiave primaria generato automaticamente)
+                \item animale (chiave esterna -\> animale)
+                \item titolo
+                \item autore/i
+                \item descrizione
+                \item contenuto
+                \item tag [\textbf{Primo avvistamento}, \textbf{Avvistamento ulteriore}, \textbf{Nuova scoperta}, \textbf{Avvistamento accertato}]
+                \item sezione commenti (chiave esterna)
+            \end{itemize}
+            \item 
+        \end{itemize}
+
+        \item utenti:
+        \begin{itemize}
+            \item admin: tutti privileggi [DA DEFINIRE NEL DETTAGLIO]
+            \item autori: possono creare articoli, modificare e cancellare i propri articoli
+            \item utilizzatori, ovvero utenti registrati che possono leggere, commentare gli articoli e votare
+            \item non registrati: possono leggere gli articoli
+        \end{itemize}
+
+        \item commento:
+        \begin{itemize}
+            \item id (chiave primaria generato automaticamente)
+            \item articolo (cbhiave esterna -> articolo)
+            \item autore (chiave esterna -> utente utilizzatore)
+            \item contenuto
+            \item risposta [chiave esterna -> commento]
+        \end{itemize}
+
+        \item voto
+        \begin{itemize}
+            \item id (chiave primaria generato automaticamente)
+            \item animale (chiave esterna -> animale)
+            \item voto [\textbf{Esiste}, \textbf{Non esiste}]
+        \end{itemize}
+
+        \item animale
+        \begin{itemize}
+            \item nome [chiave primaria]
+            \item immagine
+            \item descrizione
+        \end{itemize}
+    \end{itemize}
