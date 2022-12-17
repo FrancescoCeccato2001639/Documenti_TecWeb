@@ -1,2 +1,2 @@
-\contentsline {section}{\numberline {1}Bozza}{3}{}%
-\contentsline {subsection}{\numberline {1.1}Elementi}{3}{}%
+\contentsline {section}{\numberline {1}Struttura del database}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Entità}{3}{}%
