@@ -1,54 +1,69 @@
 \section{Struttura del database}
 
+\subsection{Diagramma ER}
+    \begin{figure}[h]
+        \centering
+        %\includegraphics[width=0.8\textwidth]{img/struttura_db}
+        \caption{Diagramma ER}
+        \label{fig:diagramma_er}
+    \end{figure}
+
 \subsection{Entità}
     \begin{itemize}
-        \item articolo
+        \item \textbf{articolo}:
         \begin{itemize}
-            \item id (chiave primaria generato automaticamente)
-            \item animale (chiave esterna $\rightarrow$ animale)
+            \item \underline{id}
             \item titolo
-            \item autore/i
+            \item autore (articolo.autore $\rightarrow$ utente.id)
             \item data
             \item descrizione
             \item contenuto
             \item tag [\textbf{Primo avvistamento}, \textbf{Avvistamento ulteriore}, \textbf{Nuova scoperta}, \textbf{Avvistamento accertato}]
-            \item sezione commenti (chiave esterna)
         \end{itemize}
 
-        \item utente:
+        \item \textbf{articolo\_animale}:
         \begin{itemize}
-            \item id (chiave primaria generato automaticamente)
+            \item articolo (articolo\_animale.articolo $\rightarrow$ articolo.id)
+            \item animale (articolo\_animale.animale $\rightarrow$ animale.nome)
+        \end{itemize}
+
+        \item \textbf{utente}:
+        \begin{itemize}
+            \item \underline{id}
             \item nome utente
             \item password
             \item email
             \item ruolo [\textbf{admin}, \textbf{autore}, \textbf{utilizzatore}]
+            \begin{itemize}
+                \item \textbf{admin}: tutti privileggi [DA DEFINIRE NEL DETTAGLIO]
+                \item \textbf{autore}: possono creare articoli, modificare e cancellare i propri articoli
+                \item \textbf{utilizzatore}: ovvero utenti registrati che possono leggere, commentare gli articoli e votare
+            \end{itemize}
         \end{itemize}
 
+        \item \textbf{commento}:
         \begin{itemize}
-            \item admin: tutti privileggi [DA DEFINIRE NEL DETTAGLIO]
-            \item autori: possono creare articoli, modificare e cancellare i propri articoli
-            \item utilizzatori, ovvero utenti registrati che possono leggere, commentare gli articoli e votare
-            \item non registrati: possono leggere gli articoli
-        \end{itemize}
-
-        \item commento:
-        \begin{itemize}
-            \item id (chiave primaria generato automaticamente)
-            \item articolo (chiave esterna $\rightarrow$ articolo)
-            \item autore (chiave esterna $\rightarrow$ utente utilizzatore)
+            \item \underline{id}
+            \item articolo (commento.articolo $\rightarrow$ articolo.id)
+            \item utente (commento.utente $\rightarrow$ utente.id)
             \item data
             \item contenuto
-            \item risposta [chiave esterna $\rightarrow$ commento]
         \end{itemize}
 
-        \item voto
+        \item \textbf{risposta}
+        \begin{itemize}
+            \item risposta (risposta.risposta $\rightarrow$ commento.id)
+            \item commento (risposta.commento $\rightarrow$ commento.id)
+        \end{itemize}
+
+        \item \textbf{voto}:
         \begin{itemize}
             \item id (chiave primaria generato automaticamente)
-            \item animale (chiave esterna $\rightarrow$ animale)
+            \item animale (voto.animale $\rightarrow$ animale.nome)
             \item voto [\textbf{Esiste}, \textbf{Non esiste}]
         \end{itemize}
 
-        \item animale
+        \item \textbf{animale}:
         \begin{itemize}
             \item nome [chiave primaria]
             \item immagine
