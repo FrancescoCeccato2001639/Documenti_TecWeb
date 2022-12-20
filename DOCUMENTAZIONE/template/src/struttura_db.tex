@@ -1,43 +1,44 @@
 \section{Struttura del database}
 
-\subsection{Diagramma ER}
+\subsection{Modello relazionale}
     \begin{figure}[h]
         \centering
-        %\includegraphics[width=0.8\textwidth]{img/struttura_db}
+        \includegraphics[width=1.0\textwidth]{assets/eLusive_DB.jpg}
         \caption{Diagramma ER}
         \label{fig:diagramma_er}
     \end{figure}
 
-\subsection{Entità}
+\subsection{Modello logico}
     \begin{itemize}
         \item \textbf{articolo}:
         \begin{itemize}
-            \item \underline{id}
+            \item \underline{id} 
             \item titolo
             \item autore (articolo.autore $\rightarrow$ utente.id)
             \item data
             \item descrizione
             \item contenuto
-            \item tag [\textbf{Primo avvistamento}, \textbf{Avvistamento ulteriore}, \textbf{Nuova scoperta}, \textbf{Avvistamento accertato}]
+            \item immagine
+            \item tag [\textbf{scoperta}, \textbf{new-entry}, \textbf{avvistamento}, \textbf{comunicazione}, \textbf{none}]
         \end{itemize}
 
         \item \textbf{articolo\_animale}:
         \begin{itemize}
-            \item articolo (articolo\_animale.articolo $\rightarrow$ articolo.id)
-            \item animale (articolo\_animale.animale $\rightarrow$ animale.nome)
+            \item \underline{articolo} (articolo\_animale.articolo $\rightarrow$ articolo.id)
+            \item \underline{animale} (articolo\_animale.animale $\rightarrow$ animale.nome)
         \end{itemize}
 
         \item \textbf{utente}:
         \begin{itemize}
             \item \underline{id}
-            \item nome utente
+            \item nome
             \item password
             \item email
-            \item ruolo [\textbf{admin}, \textbf{autore}, \textbf{utilizzatore}]
+            \item ruolo [\textbf{admin}, \textbf{writer}, \textbf{user}]
             \begin{itemize}
                 \item \textbf{admin}: tutti privileggi [DA DEFINIRE NEL DETTAGLIO]
-                \item \textbf{autore}: possono creare articoli, modificare e cancellare i propri articoli
-                \item \textbf{utilizzatore}: ovvero utenti registrati che possono leggere, commentare gli articoli e votare
+                \item \textbf{writer}: possono creare articoli, modificare e cancellare i propri articoli
+                \item \textbf{user}: ovvero utenti registrati che possono leggere, commentare gli articoli e votare
             \end{itemize}
         \end{itemize}
 
@@ -52,21 +53,23 @@
 
         \item \textbf{risposta}
         \begin{itemize}
-            \item risposta (risposta.risposta $\rightarrow$ commento.id)
-            \item commento (risposta.commento $\rightarrow$ commento.id)
+            \item \underline{risposta} (risposta.risposta $\rightarrow$ commento.id)
+            \item \underline{commento} (risposta.commento $\rightarrow$ commento.id)
         \end{itemize}
 
         \item \textbf{voto}:
         \begin{itemize}
-            \item id (chiave primaria generato automaticamente)
-            \item animale (voto.animale $\rightarrow$ animale.nome)
+            \item \underline{utente} (voto.utente $\rightarrow$ utente.id)
+            \item \underline{animale} (voto.animale $\rightarrow$ animale.nome)
             \item voto [\textbf{Esiste}, \textbf{Non esiste}]
         \end{itemize}
 
         \item \textbf{animale}:
         \begin{itemize}
-            \item nome [chiave primaria]
+            \item \underline{nome} 
             \item immagine
             \item descrizione
+            \item data\_scoperta
+            \item immagine
         \end{itemize}
     \end{itemize}
