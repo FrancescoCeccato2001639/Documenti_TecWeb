@@ -1,3 +1,4 @@
+
 ======= SEZIONE ARTICOLI ========
 
 1. HOMEPAGE (index.html)
@@ -5,7 +6,7 @@ TO DO: aumentare opacità background
 2. PAGINA DELL'ARTICOLO (parametrizzata)
 +contenente commenti
 3. LISTA CON TUTTI GLI ARTICOLI
-4. FORM DI CREAZIONE DI UN ARTICOLO
+4. FORM DI CREAZIONE+MODIFICA DI UN ARTICOLO
 (accessibile soltanto a writer/admin)
 
 ======== SEZIONE ANIMALI ==========
@@ -14,8 +15,9 @@ TO DO: aumentare opacità background
 2. CLASSIFICA DEGLI ANIMALI PIU' "CREDIBILI"
 3. FORM AGGIUNTA ANIMALE
 
-======== SEZIONE ADMIN ==============
+======== SEZIONE GERARCHIA ==============
 
+LOGIN FORM
 PANNELLO DI CONTROLLO ADMIN
 
 FILE CSS:
