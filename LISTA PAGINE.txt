@@ -1,0 +1,26 @@
+======= SEZIONE ARTICOLI ========
+
+1. HOMEPAGE (index.html)
+TO DO: aumentare opacità background
+2. PAGINA DELL'ARTICOLO (parametrizzata)
++contenente commenti
+3. LISTA CON TUTTI GLI ARTICOLI
+4. FORM DI CREAZIONE DI UN ARTICOLO
+(accessibile soltanto a writer/admin)
+
+======== SEZIONE ANIMALI ==========
+1. PAGINA DELL'ANIMALE
+(contenente pulsanti votazione)
+2. CLASSIFICA DEGLI ANIMALI PIU' "CREDIBILI"
+3. FORM AGGIUNTA ANIMALE
+
+======== SEZIONE ADMIN ==============
+
+PANNELLO DI CONTROLLO ADMIN
+
+FILE CSS:
+-1 generico (desktop)
+-N file di stile per elementi specifici
+-1 contenente le proprietà "media-screen"
+-1 per la stampa
+-1 per dispositivi mobili
