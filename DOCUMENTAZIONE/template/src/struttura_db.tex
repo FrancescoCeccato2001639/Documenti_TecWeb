@@ -20,6 +20,7 @@
             \item contenuto
             \item immagine
             \item tag [\textbf{scoperta}, \textbf{new-entry}, \textbf{avvistamento}, \textbf{comunicazione}, \textbf{none}]
+            \item featured
         \end{itemize}
 
         \item \textbf{articolo\_animale}:
@@ -54,7 +55,7 @@
         \item \textbf{risposta}
         \begin{itemize}
             \item \underline{risposta} (risposta.risposta $\rightarrow$ commento.id)
-            \item \underline{commento} (risposta.commento $\rightarrow$ commento.id)
+            \item \underline{padre} (risposta.padre $\rightarrow$ commento.id)
         \end{itemize}
 
         \item \textbf{voto}:
@@ -71,5 +72,6 @@
             \item descrizione
             \item data\_scoperta
             \item immagine
+            \item status [\textbf{scoperto}, \textbf{ipotizzato}, \textbf{avvistato}]
         \end{itemize}
     \end{itemize}
