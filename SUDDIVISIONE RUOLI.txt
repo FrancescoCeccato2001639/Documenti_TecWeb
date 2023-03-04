@@ -1,0 +1,17 @@
+(Si suppone che un ruolo più in alto erediti tutte le funzioni dei ruoli più in basso)
+
+>VISITATORE (aka NON AUTENTICATO):
+Può solamente leggere gli articoli
+>UTENTE AUTENTICATO (comune):
+Può lasciare commenti sotto gli articoli
+Può esprimere votazioni relative a ogni animale
+>SCRITTORE
+Può scrivere articoli
+Può cancellare i propri articoli
+Quando commenta ha un badge dedicato (e anche un colore del nickname differente se è l'autore di quell'articolo)
+>ADMIN
+Può accedere al pannello di controllo dove:
+> Può cancellare anche gli articoli di altri scrittori
+> Può modificare la lista animali 
+> Può gestire la lista utenti (moderazione) (SE RESTA TEMPO)
+
